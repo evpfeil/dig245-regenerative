@@ -1,2 +1,99 @@
 
-/* css */
+/* [AI-Assisted: Copilot SDK in VS Code | 2026-10-21] */
+/* Intent: Apply the requested sky-blue page background and consistent filled-blue button states. */
+body {
+    background-color: #65A3D2;
+}
+
+.forecast-navigation,
+.forecast-day {
+    --bs-btn-color: #071A26;
+    --bs-btn-bg: #3B8FC5;
+    --bs-btn-border-color: #3B8FC5;
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: #2F78A8;
+    --bs-btn-hover-border-color: #2F78A8;
+    --bs-btn-active-color: #fff;
+    --bs-btn-active-bg: #245F87;
+    --bs-btn-active-border-color: #245F87;
+}
+
+.forecast-day[aria-pressed="true"] {
+    --bs-btn-color: #fff;
+    --bs-btn-bg: #245F87;
+    --bs-btn-border-color: #245F87;
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: #1D4F72;
+    --bs-btn-hover-border-color: #1D4F72;
+}
+
+.forecast-day[aria-pressed="true"] .forecast-day__date {
+    color: #fff;
+}
+
+.forecast-navigation:focus-visible,
+.forecast-day:focus-visible {
+    outline: 0.2rem solid #174f78;
+    outline-offset: 0.15rem;
+}
+
+/* [AI-Assisted: Copilot SDK in VS Code | 2026-10-21] */
+/* Intent: Match the hourly panel, cards, and scrollbar to the blue forecast palette. */
+.forecast-details,
+.forecast-details__header {
+    color: #fff;
+    background-color: #65A3D2;
+    border-color: rgba(255, 255, 255, 0.35);
+}
+
+/* [AI-Assisted: Copilot SDK in VS Code | 2026-10-21] */
+/* Intent: Present hourly conditions as a touch-friendly, snap-scrolling horizontal strip. */
+.hourly-forecast-scroll {
+    overflow-x: auto;
+    overscroll-behavior-inline: contain;
+    padding-bottom: 0.75rem;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-color: #2F78A8 #A9D0EC;
+    scrollbar-width: thin;
+}
+
+.hourly-forecast-scroll::-webkit-scrollbar {
+    height: 0.65rem;
+}
+
+.hourly-forecast-scroll::-webkit-scrollbar-track {
+    border-radius: 999px;
+    background-color: #A9D0EC;
+}
+
+.hourly-forecast-scroll::-webkit-scrollbar-thumb {
+    border: 2px solid #A9D0EC;
+    border-radius: 999px;
+    background-color: #2F78A8;
+}
+
+.hourly-forecast-scroll::-webkit-scrollbar-thumb:hover {
+    background-color: #245F87;
+}
+
+.hourly-forecast-scroll:focus-visible {
+    border-radius: var(--bs-border-radius);
+    outline: 0.2rem solid #fff;
+    outline-offset: 0.2rem;
+}
+
+.hourly-forecast__item {
+    flex: 0 0 5.5rem;
+    scroll-snap-align: start;
+}
+
+.hourly-forecast__card {
+    min-height: 6rem;
+    color: #fff;
+    background-color: #3B8FC5;
+}
+
+.hourly-forecast__card .text-body-secondary {
+    color: #e8f4fc !important;
+}
